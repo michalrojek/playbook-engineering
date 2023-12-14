@@ -7,7 +7,7 @@ export const isTitleValid = (title: string) => {
 };
 
 export const isAmountValid = (amount: number) => {
-  if (amount < 10) {
+  if (Number.isNaN(amount) || amount < 10) {
     alert("Amount is too low!");
     return false;
   }
